@@ -9,10 +9,12 @@ You are suddenly trapped in a mysterious, messy room by a **Clean Freak Ghost**.
 - **VR Simulator Setup:** Fully integrated XR Device Simulator for fast, headset-free development testing.
 - **Physical Trash Interaction:** Implemented `XR Grab Interactable` components on 5 old trash cans spread across the scene.
 - **Physics & Colliders Configuration:** Properly configured non-static rigidbodies and mesh colliders allowing players to pick up, carry, and drop objects dynamically.
+- **Introductory UI Storyline:** Integrated the start menu and narrative canvas into a separate `MainMenu` scene, which smoothly loads the main gameplay.
+- **Atmospheric UI Graphics:** Customized the canvases using horror-themed fonts (Special Elite) and grunge/blood textures for an immersive look.
+- **Dynamic Dashboard & Timer:** Implemented a functional countdown timer with a neon glow effect and a live-updating to-do checklist ("Cans Remaining: X/5").
+- **Win/Lose Conditions:** Added logic that triggers victory when all trash is inside `Sink_V1` and defeat when the timer hits zero.
 
 ## 🚀 Future Roadmap
-- **Introductory UI Storyline:** A narrative UI element at the start of the game explaining the ghost's backstory and your predicament.
-- **Dynamic To-Do List Dashboard:** An interactive screen tracking your progress (e.g., "Cans Remaining: X/5").
-- **On-Screen Gameplay Timer:** A ticking clock to increase tension.
-- **Win/Lose Conditions:** - **Victory:** "You Escaped!" overlay triggering once all trash is placed inside the kitchen sink (`Sink_V1`).
-  - **Defeat:** An angry ghost jump-scare/feedback loop if the player fails to clean up before the timer expires.
+- **Audio & Sound Effects:** Creepy background music and sound effects for gathering trash or the ticking clock.
+- **Visual Feedback:** Dimming or flickering lights as the timer gets closer to zero to increase pressure.
+- **More Chores:** Introducing different types of mess scattered around the room to expand the game.
