@@ -3733,8 +3733,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: I'll clean up! (Start)
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8c1fa46ac13d1534680befb2355fddcc, type: 2}
+  m_sharedMaterial: {fileID: 3694569637100516493, guid: 8c1fa46ac13d1534680befb2355fddcc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4315,8 +4315,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'time left: 01:00'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8c1fa46ac13d1534680befb2355fddcc, type: 2}
+  m_sharedMaterial: {fileID: 3694569637100516493, guid: 8c1fa46ac13d1534680befb2355fddcc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6910,8 +6910,8 @@ MonoBehaviour:
     of trash is placed inside the kitchen sink. Don't make me lose my patience...
     clean up, NOW!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8c1fa46ac13d1534680befb2355fddcc, type: 2}
+  m_sharedMaterial: {fileID: 3694569637100516493, guid: 8c1fa46ac13d1534680befb2355fddcc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7133,7 +7133,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 298.34, y: 51}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1556748081
 MonoBehaviour:
@@ -8707,8 +8707,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u2022 clean cans: 0 / 5"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8c1fa46ac13d1534680befb2355fddcc, type: 2}
+  m_sharedMaterial: {fileID: 3694569637100516493, guid: 8c1fa46ac13d1534680befb2355fddcc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9343,8 +9343,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: The tidy ghost.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8c1fa46ac13d1534680befb2355fddcc, type: 2}
+  m_sharedMaterial: {fileID: 3694569637100516493, guid: 8c1fa46ac13d1534680befb2355fddcc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9407,7 +9407,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -225.02057, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
