@@ -1,0 +1,32 @@
+/[L|l]ibrary/
+/[T|t]emp/
+/[O|o]bj/
+/[B|b]uild/
+/[B|b]uilds/
+/[L|l]ogs/
+/[U|u]ser[S|s]ettings/
+
+# Memory dumps
+*.kdmp
+*.pmp
+*.vmp
+*.dmprt
+
+# Crash reports
+/[C|c]rash[R|r]eports/
+
+# Visual Studio / Rider generated files
+.vs/
+.idea/
+*.csproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svclog
+
+# OS generated files
+.DS_Store
+Thumbs.db
