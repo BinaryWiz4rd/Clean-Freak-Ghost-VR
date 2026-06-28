@@ -6983,8 +6983,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Welcome to my room! Look at this mess... it's absolutely unacceptable!
     I am locking the doors. You are not allowed to leave until every single piece
-    of trash is placed inside the kitchen sink. Don't make me lose my patience...
-    clean up, NOW!
+    of trash is placed inside the kitchen sink on the righthand side. Don't make
+    me lose my patience... clean up, NOW!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8c1fa46ac13d1534680befb2355fddcc, type: 2}
   m_sharedMaterial: {fileID: 3694569637100516493, guid: 8c1fa46ac13d1534680befb2355fddcc, type: 2}
