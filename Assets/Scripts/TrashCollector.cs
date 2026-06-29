@@ -16,6 +16,7 @@ public class TrashCollector : MonoBehaviour
 
     [Header("interaction objects")]
     public GameObject exitDoor;
+    public GameObject ghostCharacter;
 
     [Header("audio settings")]
     public AudioSource backgroundMusic; 
@@ -41,6 +42,7 @@ public class TrashCollector : MonoBehaviour
         if (introCanvas != null) introCanvas.SetActive(true);
         if (winCanvas != null) winCanvas.SetActive(false);
         if (loseCanvas != null) loseCanvas.SetActive(false);
+        if (ghostCharacter != null) ghostCharacter.SetActive(false);
         
         updateUI();
     }
@@ -129,6 +131,8 @@ public class TrashCollector : MonoBehaviour
     {
         isGameOver = true;
         Debug.Log("game over! ghost lost patience.");
+
+        if (ghostCharacter != null) ghostCharacter.SetActive(true);
 
         positionCanvasInFrontOfPlayer(loseCanvas);
         if (loseCanvas != null) loseCanvas.SetActive(true);
