@@ -18,9 +18,10 @@ public class TrashCollector : MonoBehaviour
     public GameObject exitDoor;
 
     [Header("audio settings")]
-    public AudioSource backgroundMusic;
-    public AudioSource successSound;
-    public AudioSource ghostAngrySound;
+    public AudioSource backgroundMusic; 
+    public AudioSource canDropSound;     
+    public AudioSource winMusic;         
+    public AudioSource ghostAngrySound;  
 
     private int currentCount = 0;
     private float timeRemaining;
@@ -73,6 +74,8 @@ public class TrashCollector : MonoBehaviour
         currentCount++;
         Debug.Log("trash added! current count: " + currentCount + " / " + targetCount);
         
+        if (canDropSound != null) canDropSound.Play();
+
         Destroy(trashItem);
         updateUI();
 
@@ -115,10 +118,10 @@ public class TrashCollector : MonoBehaviour
         if (winCanvas != null) winCanvas.SetActive(true);
 
         if (backgroundMusic != null) backgroundMusic.Stop();
-        if (successSound != null)
+        if (winMusic != null)
         {
-            successSound.loop = true;
-            successSound.Play();
+            winMusic.loop = true;
+            winMusic.Play();
         }
     }
 
