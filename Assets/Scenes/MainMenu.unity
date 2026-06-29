@@ -181,6 +181,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1516575278526956, guid: 30577724fca9edb43bab2188e72a1cc1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 55986846}
+    - targetCorrespondingSourceObject: {fileID: 1516575278526956, guid: 30577724fca9edb43bab2188e72a1cc1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 55986851}
   m_SourcePrefab: {fileID: 100100000, guid: 30577724fca9edb43bab2188e72a1cc1, type: 3}
 --- !u!1 &55986844 stripped
 GameObject:
@@ -213,6 +216,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.9431987, y: 0.22921515, z: 0.54925966}
   m_Center: {x: -0.01707077, y: 0.7177239, z: 0.019530416}
+--- !u!114 &55986851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55986844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62641ae0d0fe1f04e80b357a7aa8598a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SinkManager
+  trashTag: Trash
 --- !u!1 &95586446
 GameObject:
   m_ObjectHideFlags: 0
