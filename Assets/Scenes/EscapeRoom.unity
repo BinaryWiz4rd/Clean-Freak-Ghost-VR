@@ -6644,6 +6644,7 @@ MonoBehaviour:
   loseCanvas: {fileID: 286346064}
   exitDoor: {fileID: 1572830862}
   ghostCharacter: {fileID: 1458820326}
+  ghostSpeed: 3.67
   backgroundMusic: {fileID: 1361739864}
   canDropSound: {fileID: 1199201094}
   winMusic: {fileID: 1105515021}

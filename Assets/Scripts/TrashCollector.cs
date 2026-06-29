@@ -17,6 +17,7 @@ public class TrashCollector : MonoBehaviour
     [Header("interaction objects")]
     public GameObject exitDoor;
     public GameObject ghostCharacter;
+    public float ghostSpeed = 2f;
 
     [Header("audio settings")]
     public AudioSource backgroundMusic; 
@@ -29,6 +30,9 @@ public class TrashCollector : MonoBehaviour
     private bool isGameActive = false;
     private bool isGameOver = false;
     private Transform centerEyeCamera;
+
+    private bool ghostShouldMove = false;
+    private float ghostTimer = 0f;
 
     void Start()
     {
@@ -49,6 +53,29 @@ public class TrashCollector : MonoBehaviour
 
     void Update()
     {
+        if (isGameOver && ghostShouldMove && ghostCharacter != null && centerEyeCamera != null)
+        {
+            ghostTimer += Time.deltaTime;
+            if (ghostTimer >= 5f)
+            {
+                Vector3 targetPosition = centerEyeCamera.position;
+                targetPosition.y = ghostCharacter.transform.position.y; 
+
+                ghostCharacter.transform.position = Vector3.MoveTowards(
+                    ghostCharacter.transform.position, 
+                    targetPosition, 
+                    ghostSpeed * Time.deltaTime
+                );
+
+                Vector3 lookDirection = targetPosition - ghostCharacter.transform.position;
+                if (lookDirection != Vector3.zero)
+                {
+                    ghostCharacter.transform.rotation = Quaternion.LookRotation(lookDirection);
+                }
+            }
+            return;
+        }
+
         if (!isGameActive || isGameOver) return;
 
         if (timeRemaining > 0)
@@ -133,6 +160,8 @@ public class TrashCollector : MonoBehaviour
         Debug.Log("game over! ghost lost patience.");
 
         if (ghostCharacter != null) ghostCharacter.SetActive(true);
+        ghostShouldMove = true;
+        ghostTimer = 0f;
 
         positionCanvasInFrontOfPlayer(loseCanvas);
         if (loseCanvas != null) loseCanvas.SetActive(true);
