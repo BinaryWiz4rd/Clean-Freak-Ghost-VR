@@ -25,11 +25,17 @@ public class TrashCollector : MonoBehaviour
     private float timeRemaining;
     private bool isGameActive = false;
     private bool isGameOver = false;
+    private Transform centerEyeCamera;
 
     void Start()
     {
         timeRemaining = timeLimit;
         
+        if (Camera.main != null)
+        {
+            centerEyeCamera = Camera.main.transform;
+        }
+
         if (introCanvas != null) introCanvas.SetActive(true);
         if (winCanvas != null) winCanvas.SetActive(false);
         if (loseCanvas != null) loseCanvas.SetActive(false);
@@ -108,6 +114,7 @@ public class TrashCollector : MonoBehaviour
         Debug.Log("puzzle solved! exit open.");
 
         if (exitDoor != null) exitDoor.SetActive(false);
+        
         if (winCanvas != null) winCanvas.SetActive(true);
     }
 
@@ -116,7 +123,22 @@ public class TrashCollector : MonoBehaviour
         isGameOver = true;
         Debug.Log("game over! ghost lost patience.");
 
+        positionCanvasInFrontOfPlayer(loseCanvas);
         if (loseCanvas != null) loseCanvas.SetActive(true);
         if (ghostAngrySound != null) ghostAngrySound.Play();
+    }
+
+    private void positionCanvasInFrontOfPlayer(GameObject canvas)
+    {
+        if (canvas == null || centerEyeCamera == null) return;
+
+        Vector3 spawnPosition = centerEyeCamera.position + (centerEyeCamera.forward * 1.5f);
+        spawnPosition.y = centerEyeCamera.position.y; 
+
+        canvas.transform.position = spawnPosition;
+
+        Vector3 lookAtDirection = canvas.transform.position - centerEyeCamera.position;
+        lookAtDirection.y = 0; 
+        canvas.transform.rotation = Quaternion.LookRotation(lookAtDirection);
     }
 }
