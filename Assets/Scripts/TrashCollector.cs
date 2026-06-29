@@ -18,6 +18,7 @@ public class TrashCollector : MonoBehaviour
     public GameObject exitDoor;
 
     [Header("audio settings")]
+    public AudioSource backgroundMusic;
     public AudioSource successSound;
     public AudioSource ghostAngrySound;
 
@@ -71,11 +72,8 @@ public class TrashCollector : MonoBehaviour
 
         currentCount++;
         Debug.Log("trash added! current count: " + currentCount + " / " + targetCount);
-
-        if (successSound != null) successSound.Play();
         
         Destroy(trashItem);
-        
         updateUI();
 
         if (currentCount >= targetCount)
@@ -114,8 +112,14 @@ public class TrashCollector : MonoBehaviour
         Debug.Log("puzzle solved! exit open.");
 
         if (exitDoor != null) exitDoor.SetActive(false);
-        
         if (winCanvas != null) winCanvas.SetActive(true);
+
+        if (backgroundMusic != null) backgroundMusic.Stop();
+        if (successSound != null)
+        {
+            successSound.loop = true;
+            successSound.Play();
+        }
     }
 
     private void gameOverLose()
@@ -125,7 +129,13 @@ public class TrashCollector : MonoBehaviour
 
         positionCanvasInFrontOfPlayer(loseCanvas);
         if (loseCanvas != null) loseCanvas.SetActive(true);
-        if (ghostAngrySound != null) ghostAngrySound.Play();
+
+        if (backgroundMusic != null) backgroundMusic.Stop();
+        if (ghostAngrySound != null)
+        {
+            ghostAngrySound.loop = true;
+            ghostAngrySound.Play();
+        }
     }
 
     private void positionCanvasInFrontOfPlayer(GameObject canvas)
