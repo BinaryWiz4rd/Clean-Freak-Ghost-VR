@@ -7313,8 +7313,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f52bec8c6b1fa7f4d8444805931a0402, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrashCollector
-  targetCount: 1
-  timeLimit: 60
+  targetCount: 5
+  timeLimit: 120
   checklistText: {fileID: 1921595674}
   timerText: {fileID: 711366673}
   introCanvas: {fileID: 211092108}
